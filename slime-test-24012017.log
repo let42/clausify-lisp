@@ -1,0 +1,140 @@
+; SLIME 2015-08-24
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (termp 'abc)
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+
+
+; file: /home/let42/github/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (FUN)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUN
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUN
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+
+;     (FUNC)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNC
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNC
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+
+;     (FUNZIONE)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNZIONE
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNZIONE
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+
+; in: DEFUN FUNZIONEP
+;     (FUNZIONE)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNZIONE
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNZIONE
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNZIONE
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNZIONE
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (funzionep '(a bc d))
+; Evaluation aborted on #<UNDEFINED-FUNCTION FUNZIONE {1007AE5FB3}>.
+CL-USER> (funzionep '(a bc d))
+; Evaluation aborted on #<UNDEFINED-FUNCTION FUNZIONE {100484A1A3}>.
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNZIONE
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNZIONE
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+
+; in: DEFUN FUNZIONEP => DEF
+;     (DEF)
+; 
+; caught STYLE-WARNING:
+;   undefined function: DEF
+; 
+; compilation unit finished
+;   Undefined function:
+;     DEF
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "~/github/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (funzionep '(foo a b c))
+NIL
+CL-USER> (string (first '(foo a b c)))
+"FOO"
+CL-USER> (funzionep "(foo a b c)")
+; Evaluation aborted on #<TYPE-ERROR expected-type: LIST datum: "(foo a b c)">.
+CL-USER> (funzionep (quote (foo a b c)))
+NIL
+CL-USER> (char '(foo a b c) 0)
+; Evaluation aborted on #<TYPE-ERROR expected-type: STRING datum: (FOO A B C)>.
+CL-USER> (char (string '(foo)) 0)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR expected-type: SB-KERNEL:STRING-DESIGNATOR datum: (FOO)>.
+CL-USER> (symbol-name '(foo a b c))
+; Evaluation aborted on #<TYPE-ERROR expected-type: SYMBOL datum: (FOO A B C)>.
+CL-USER> (char '(a bc d) 0
+	       )
+; Evaluation aborted on #<TYPE-ERROR expected-type: STRING datum: (A BC D)>.
+CL-USER> (termp 'p)
+T
+CL-USER> (termp '?x)
+T
+CL-USER> '(and (p 42) (not x))
+(AND (P 42) (NOT X))
+CL-USER> (defparameter test '(and (p 42) foo))
+TEST
+CL-USER> test
+(AND (P 42) FOO)
+CL-USER> (format t "~a~%" test)
+(AND (P 42) FOO)
+NIL
+CL-USER> (defparameter test2  (format t "~a~%" test))
+(AND (P 42) FOO)
+TEST2
+CL-USER> test2
+NIL
+CL-USER> (char test 0)
+; Evaluation aborted on #<TYPE-ERROR expected-type: STRING datum: (AND (P 42) FOO)>.
+CL-USER> (char (first test) 0)
+; Evaluation aborted on #<TYPE-ERROR expected-type: STRING datum: AND>.
+CL-USER> (string (first test))
+"AND"
+CL-USER> '(p 42)
+(P 42)
+CL-USER> 
