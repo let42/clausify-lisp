@@ -24,13 +24,16 @@
 ;;;; universale   ::= '(' every <variabile> <fbf> ')'
 ;;;; esistenziale ::= '(' exist <variabile> <fbf> ')'
 
-;;;;cominciamo a trattare costanti
+;;;;cominciamo a riconoscere variabili e costanti
 
 
 (defun variablep (v)
+  "Determina se l'input è una variabile"
   (and (symbolp v) (char= #\? (char (symbol-name v) 0))))
 
-(defun is-characterized-num (sym)
+(defun nac(sym)
+  "Prende in ingresso un simbolo e verifica che se inizia con un numero"
+  "nac sta per number above characters"
   (or (char= #\0 (char (symbol-name sym) 0))
       (char= #\1 (char (symbol-name sym) 0))
       (char= #\2 (char (symbol-name sym) 0))
@@ -45,4 +48,10 @@
 (defun constp (c)
   (or
     (numberp c)
-    (and (symbolp c) (equal (is-characterized-num c) 'nil))))
+    (and (symbolp c) (equal (nac c) 'nil))))
+
+(defun funzionep (def)
+  (and (equal "(" ( (first def))) (equal ")" (string (last def)))))
+
+(defun termp (term)
+  (or (variablep term) (constp term)))
