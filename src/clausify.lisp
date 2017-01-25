@@ -42,9 +42,9 @@
   "Determina se l'input è una variabile"
   (and (symbolp v) (char= #\? (char (symbol-name v) 0))))
 
-(defun nac(sym)
+(defun nacp(sym)
   "Prende in ingresso un simbolo e verifica se inizia con un numero
-nac sta per number above characters"
+nac sta per number above characters predicate"
   (or (char= #\0 (char (symbol-name sym) 0))
       (char= #\1 (char (symbol-name sym) 0))
       (char= #\2 (char (symbol-name sym) 0))
@@ -58,14 +58,22 @@ nac sta per number above characters"
 
 (defun fbf-symp (s)
   "Verifica se s sia un simbolo che inizi con una lettera"
-  (and (symbolp s) (not (nac s))))
+  (and (symbolp s) (not (nacp s))))
 
 (defun constp (c)
   "Verifica se c sia una costante come da sintassi espressa in cima
 al listato."
-  (or
-    (numberp c)
-    (fbf-symp c)))
+  (or (numberp c)
+      (fbf-symp c)))
+
+(defun termp (term)
+  "Verifica se term sia un termine"
+  (or (constp term)
+      (variablep term)))
+
+(defun funp (fun)
+  "Verifica se funp sia una funzione generica"
+  (and (listp fun) (fbf-symp (car fun)) (termp (cadr fun))))
 
 (defun notp (fun)
   "Verifica se fun sia una funzione di negazione"
@@ -92,21 +100,9 @@ al listato."
   (and (listp fun) (equal (car fun) 'exist) (variablep (cadr fun))))
 
 (defun predicatep (pred)
-  (or
-   (fbf-symp (car pred))))
-   
-       
-
-(defun funp* (fun)
-  (and
-   (or (notp fun)
-      (andp fun)
-      (orp fun)
-      (impliesp fun)
-      (universalp fun)
-      (existentialp fun)
-      (fbf-symp (car fun)))
-   ()))
+  (or (and (listp pred) (fbf-symp (car pred)) (termp (cadr pred)))
+      (fbf-symp pred)))
+	       
 
 ;;;; ridefinire singolarmente le funzioni dei connettivi
 ;;;; funp* ricorsiva
