@@ -91,6 +91,26 @@ al listato."
   "Verifica se fun sia una funzione di quantificazione esistenziale"
   (and (listp fun) (equal (car fun) 'exist) (variablep (cadr fun))))
 
-(defun termp (term)
-  (or (variablep term) (constp term)))
+(defun predicatep (pred)
+  (or
+   (fbf-symp (car pred))))
+   
+       
 
+(defun funp* (fun)
+  (and
+   (or (notp fun)
+      (andp fun)
+      (orp fun)
+      (impliesp fun)
+      (universalp fun)
+      (existentialp fun)
+      (fbf-symp (car fun)))
+   ()))
+
+;;;; ridefinire singolarmente le funzioni dei connettivi
+;;;; funp* ricorsiva
+;;;; predicatep ricorsiva
+;;;; fbfp ricorsiva
+;;;; is-horn verifica se la fbf o la cnf sia trasformabile in
+;;;; una clausola di horn.
