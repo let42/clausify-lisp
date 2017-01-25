@@ -73,4 +73,158 @@ CL-USER> (car '(implies a (not q)))
 IMPLIES
 CL-USER> (impliesp '(implies a (not q)))
 T
+CL-USER> (defparameter test '(implies (not (bar 42)) qwe))
+TEST
+CL-USER> (universalp test)
+NIL
+CL-USER> (implies test)
+; Evaluation aborted on #<UNDEFINED-FUNCTION IMPLIES {1004AEE793}>.
+CL-USER> (impliesp test)
+T
+CL-USER> (not (cadr test))
+NIL
+CL-USER> (notp (cadr test))
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN CONSTP
+;     (FBF-SYMBOLP C)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FBF-SYMBOLP
+; 
+; compilation unit finished
+;   Undefined function:
+;     FBF-SYMBOLP
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN TERMP
+;     (DEFUN TERMP (T)
+;       "Verifica se t sia un termine"
+;       (OR (CONSTP T) (VARIABLEP T) (FUNP* T)))
+; 
+; caught ERROR:
+;   T names a defined constant, and cannot be used as a local variable.
+While evaluating the form starting at line 69, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; 
+                                                                             ; compilation unit aborted
+                                                                             ;   caught 1 fatal ERROR condition
+                                                                             ;   caught 1 ERROR condition
+; Evaluation aborted on #<SB-INT:SIMPLE-PROGRAM-ERROR "~@<~S names a defined constant, and cannot be used as a local variable.~:@>" {10053572E3}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; 
+; caught STYLE-WARNING:
+;   undefined function: FBF-SYMBOLP
+; 
+; compilation unit finished
+;   Undefined function:
+;     FBF-SYMBOLP
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN TERMP
+;     (DEFUN TERMP (T) "Verifica se t sia un termine" (OR (CONSTP T) (VARIABLEP T)))
+; 
+; caught ERROR:
+;   T names a defined constant, and cannot be used as a local variable.
+While evaluating the form starting at line 69, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; 
+                                                                             ; compilation unit aborted
+                                                                             ;   caught 1 fatal ERROR condition
+                                                                             ;   caught 1 ERROR condition
+; Evaluation aborted on #<SB-INT:SIMPLE-PROGRAM-ERROR "~@<~S names a defined constant, and cannot be used as a local variable.~:@>" {1005803693}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; 
+; caught STYLE-WARNING:
+;   undefined function: FBF-SYMBOLP
+; 
+; compilation unit finished
+;   Undefined function:
+;     FBF-SYMBOLP
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (predicatep '(foo 42))
+NIL
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (predicatep '42)
+NIL
+CL-USER> (predicatep 'foo)
+T
+CL-USER> (trace predicatep)
+(PREDICATEP)
+CL-USER> (predicate '(foo 42))
+
+; in: PREDICATE '(FOO 42)
+;     (PREDICATE '(FOO 42))
+; 
+; caught STYLE-WARNING:
+;   undefined function: PREDICATE
+; 
+; compilation unit finished
+;   Undefined function:
+;     PREDICATE
+;   caught 1 STYLE-WARNING condition
+; Evaluation aborted on #<UNDEFINED-FUNCTION PREDICATE {100681C7C3}>.
+CL-USER> (untrace predicate)
+WARNING: COMMON-LISP-USER::PREDICATE is undefined, not tracing.
+T
+CL-USER> (trace predicatep)
+WARNING: PREDICATEP is already TRACE'd, untracing it first.
+(PREDICATEP)
+CL-USER> (predicatep '(foo 42))
+  0: (PREDICATEP (FOO 42))
+  0: PREDICATEP returned NIL
+NIL
+CL-USER> (car '(foo 42))
+FOO
+CL-USER> (fbf-symp '(foo 42))
+NIL
+CL-USER> (fbf-symp (car '(foo 42)))
+T
+CL-USER> (termp (cdr '(foo 42)))
+NIL
+CL-USER> (cdr '(foo 42))
+(42)
+CL-USER> (last '(foo 42))
+(42)
+CL-USER> (last '(foo 42))
+(42)
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (predicatep '(foo 42))
+  0: (PREDICATEP (FOO 42))
+  0: PREDICATEP returned T
+T
+CL-USER> (untrace predicatep)
+T
+CL-USER> (debug)
+
+; in: DEBUG
+;     (DEBUG)
+; 
+; caught WARNING:
+;   The function DEBUG is undefined, and its name is reserved by ANSI CL so that
+;   even if it were defined later, the code doing so would not be portable.
+; 
+; compilation unit finished
+;   Undefined function:
+;     DEBUG
+;   caught 1 WARNING condition
+; Evaluation aborted on #<UNDEFINED-FUNCTION DEBUG {1003E6B8A3}>.
+CL-USER> '()
+NIL
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (funp '(foo 42))
+T
+CL-USER> (funp '(not p (or q)))
+T
+CL-USER> (funp '42)
+NIL
 CL-USER> 
