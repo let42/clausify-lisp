@@ -1,0 +1,76 @@
+; SLIME 2016-04-19
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+While evaluating the form starting at line 34, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN CONSTP
+;     (NAC C)
+; 
+; caught STYLE-WARNING:
+;   undefined function: NAC
+; 
+; compilation unit finished
+;   Undefined function:
+;     NAC
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNZIONEP
+;     ((FIRST DEF))
+; 
+; caught ERROR:
+;   illegal function call
+; 
+; compilation unit finished
+;   caught 1 ERROR condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+While evaluating the form starting at line 34, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; Evaluation aborted on #<SIMPLE-ERROR "duplicate doc string ~S" {1003BE01F3}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+While evaluating the form starting at line 34, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; Evaluation aborted on #<SIMPLE-ERROR "duplicate doc string ~S" {1003EC8653}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {100431BC23}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+T
+CL-USER> (notp '(not <fbf>)
+	       )
+T
+CL-USER> (symbolp '4fc)
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+;     (FBF-SYMP S)
+; 
+; caught WARNING:
+;   undefined variable: S
+; 
+; compilation unit finished
+;   Undefined variable:
+;     S
+;   caught 1 WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+T
+CL-USER> (implies '(implies a (not q)))
+
+; in: IMPLIES '(IMPLIES A (NOT Q))
+;     (IMPLIES '(IMPLIES A (NOT Q)))
+; 
+; caught STYLE-WARNING:
+;   undefined function: IMPLIES
+; 
+; compilation unit finished
+;   Undefined function:
+;     IMPLIES
+;   caught 1 STYLE-WARNING condition
+; Evaluation aborted on #<UNDEFINED-FUNCTION IMPLIES {1002A46023}>.
+CL-USER> (car '(implies a (not q)))
+IMPLIES
+CL-USER> (impliesp '(implies a (not q)))
+T
+CL-USER> 
