@@ -24,7 +24,18 @@
 ;;;; universale   ::= '(' every <variabile> <fbf> ')'
 ;;;; esistenziale ::= '(' exist <variabile> <fbf> ')'
 
-;;;;cominciamo a riconoscere variabili e costanti
+;;;; Regole di sostituzione
+;;;; 1. (not (not p)) -> p
+;;;; 2. (not (and p q)) -> (or (not p) (not q))
+;;;; 3. (not (or p q)) -> (and (not p) (not q))
+;;;; 4. (not (every ?x (p ?x))) -> (every ?x (not (p ?x)))
+;;;; 5. (not (exist ?x (p ?x))) -> (exist ?x (not (p ?x)))
+;;;; 6. (implies p q) -> (or (not p) q)
+;;;; 7. (or p (and q w)) -> (and (or p q) (or p w))
+;;;; 9. (exist ?x (p ?x) -> (p sk<progressive>)
+;;;; 10. (every ?y (exist ?x (p ?x ?y)) -> (every ?y (p sf<pr> ?y) ?y)
+
+;;;; Funzioni di riconoscimento delle variabili costanti e dei simboli
 
 
 (defun variablep (v)
@@ -32,8 +43,8 @@
   (and (symbolp v) (char= #\? (char (symbol-name v) 0))))
 
 (defun nac(sym)
-  "Prende in ingresso un simbolo e verifica che se inizia con un numero"
-  "nac sta per number above characters"
+  "Prende in ingresso un simbolo e verifica se inizia con un numero
+nac sta per number above characters"
   (or (char= #\0 (char (symbol-name sym) 0))
       (char= #\1 (char (symbol-name sym) 0))
       (char= #\2 (char (symbol-name sym) 0))
@@ -45,13 +56,41 @@
       (char= #\8 (char (symbol-name sym) 0))
       (char= #\9 (char (symbol-name sym) 0))))
 
+(defun fbf-symp (s)
+  "Verifica se s sia un simbolo che inizi con una lettera"
+  (and (symbolp s) (not (nac s))))
+
 (defun constp (c)
+  "Verifica se c sia una costante come da sintassi espressa in cima
+al listato."
   (or
     (numberp c)
-    (and (symbolp c) (equal (nac c) 'nil))))
+    (fbf-symp c)))
 
-(defun funzionep (def)
-  (and (equal "(" ( (first def))) (equal ")" (string (last def)))))
+(defun notp (fun)
+  "Verifica se fun sia una funzione di negazione"
+  (and (listp fun) (equal (car fun) 'not)))
+	   
+(defun andp (fun)
+  "Verifica se fun sia una funzione di coniunzione"
+  (and (listp fun) (equal (car fun) 'and)))
+
+(defun orp (fun)
+  "Verifica se fun sia una funzione di disgiunzione"
+  (and (listp fun) (equal (car fun) 'or)))
+
+(defun impliesp (fun)
+  "Verifica se fun sia una funzione di implicazione"
+  (and (listp fun) (equal (car fun) 'implies)))
+
+(defun universalp (fun)
+  "Verifica se fun sia una funzione di quantificazione universale"
+  (and (listp fun) (equal (car fun) 'every) (variablep (cadr fun))))
+
+(defun existentialp (fun)
+  "Verifica se fun sia una funzione di quantificazione esistenziale"
+  (and (listp fun) (equal (car fun) 'exist) (variablep (cadr fun))))
 
 (defun termp (term)
   (or (variablep term) (constp term)))
+
