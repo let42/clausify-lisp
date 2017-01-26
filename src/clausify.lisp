@@ -1,3 +1,4 @@
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;                                                                              ;
 ;                                CLAUSIFY-LISP                                 ;
@@ -37,14 +38,18 @@
 
 ;;;; Funzioni di riconoscimento delle variabili costanti e dei simboli
 
+(declaim (ftype (function() t) fbfp))
+
 
 (defun variablep (v)
   "Determina se l'input è una variabile"
+  (break)
   (and (symbolp v) (char= #\? (char (symbol-name v) 0))))
 
 (defun nacp(sym)
   "Prende in ingresso un simbolo e verifica se inizia con un numero
 nac sta per number above characters predicate"
+  (break)
   (or (char= #\0 (char (symbol-name sym) 0))
       (char= #\1 (char (symbol-name sym) 0))
       (char= #\2 (char (symbol-name sym) 0))
@@ -58,51 +63,78 @@ nac sta per number above characters predicate"
 
 (defun fbf-symp (s)
   "Verifica se s sia un simbolo che inizi con una lettera"
+  (break)
   (and (symbolp s) (not (nacp s))))
 
 (defun constp (c)
   "Verifica se c sia una costante come da sintassi espressa in cima
 al listato."
+  (break)
   (or (numberp c)
       (fbf-symp c)))
 
 (defun termp (term)
   "Verifica se term sia un termine"
+  (break)
   (or (constp term)
       (variablep term)))
 
+(defun predicatep (pred)
+  (break)
+  (or (and (listp pred) (fbf-symp (car pred)) (termp (cadr pred)))
+      (fbf-symp pred)))
+
+
 (defun funp (fun)
   "Verifica se funp sia una funzione generica"
+  (break)
   (and (listp fun) (fbf-symp (car fun)) (termp (cadr fun))))
+
 
 (defun notp (fun)
   "Verifica se fun sia una funzione di negazione"
-  (and (listp fun) (equal (car fun) 'not)))
+  (break)
+  (and (listp fun) (equal (car fun) 'not) (fbfp (cdr fun))))
 	   
 (defun andp (fun)
   "Verifica se fun sia una funzione di coniunzione"
-  (and (listp fun) (equal (car fun) 'and)))
+  (break)
+  (and (listp fun) (equal (car fun) 'and) (fbfp (cdr fun))))
 
 (defun orp (fun)
   "Verifica se fun sia una funzione di disgiunzione"
-  (and (listp fun) (equal (car fun) 'or)))
+  (break)
+  (and (listp fun) (equal (car fun) 'or) (fbfp (cdr fun))))
 
 (defun impliesp (fun)
   "Verifica se fun sia una funzione di implicazione"
-  (and (listp fun) (equal (car fun) 'implies)))
+  (break)
+  (and (listp fun) (equal (car fun) 'implies) (fbfp (cdr fun))))
 
-(defun universalp (fun)
+(defun everyp (fun)
   "Verifica se fun sia una funzione di quantificazione universale"
-  (and (listp fun) (equal (car fun) 'every) (variablep (cadr fun))))
+  (break)
+  (and (listp fun) (equal (car fun) 'every) (fbfp (cdr fun))))
 
-(defun existentialp (fun)
+(defun existp (fun)
   "Verifica se fun sia una funzione di quantificazione esistenziale"
-  (and (listp fun) (equal (car fun) 'exist) (variablep (cadr fun))))
+  (break)
+  (and (listp fun) (equal (car fun) 'exist) (fbfp (cdr fun))))
 
 (defun predicatep (pred)
-  (or (and (listp pred) (fbf-symp (car pred)) (termp (cadr pred)))
+  (break)
+  (or (and (listp pred) (fbf-symp (car pred)) (termp (car (cdr pred))))
       (fbf-symp pred)))
-	       
+
+(defun fbfp (fun)
+  (break)
+  (or (predicatep fun)
+      (notp fun)
+      (andp fun)
+      (orp fun)
+      (impliesp fun)
+      (everyp fun)
+      (existp fun)))
 
 ;;;; ridefinire singolarmente le funzioni dei connettivi
 ;;;; funp* ricorsiva
