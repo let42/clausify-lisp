@@ -1,0 +1,1085 @@
+; SLIME 2016-04-19
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {1003EC8103}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN TERMP
+;     (FUNP TERM)
+; 
+; caught STYLE-WARNING:
+;   undefined function: FUNP
+; 
+; compilation unit finished
+;   Undefined function:
+;     FUNP
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+While evaluating the form starting at line 41, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {1005673D03}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {1005B1FC33}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {1002D3BD13}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {1004317BC3}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+; Evaluation aborted on #<SB-C::INPUT-ERROR-IN-LOAD {10048B7E23}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+While evaluating the form starting at line 41, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; Evaluation aborted on #<TYPE-ERROR expected-type: "LIST"datum: FUN>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> 
+; No value
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+WARNING: unrecognized declaration '(FUN)
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+WARNING:
+   The new FTYPE proclamation for COMMON-LISP-USER::FBFP
+     (FUNCTION (COMMON-LISP-USER::FUN) T)
+   does not match the old FTYPE proclamation
+     (FUNCTION NIL *)
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+; in: DEFUN FBFP
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; --> SB-C::%FUNCALL MULTIPLE-VALUE-BIND LET UNLESS IF 
+; ==>
+;   (TYPEP #:G8 'FUN)
+; 
+; caught STYLE-WARNING:
+;   undefined type: FUN
+; 
+; compilation unit finished
+;   Undefined type:
+;     FUN
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+WARNING:
+   The new FTYPE proclamation for COMMON-LISP-USER::FBFP
+     (FUNCTION NIL T)
+   does not match the old FTYPE proclamation
+     (FUNCTION (COMMON-LISP-USER::FUN) *)
+While evaluating the form starting at line 41, column 0
+  of #P"/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp":; Evaluation aborted on #<SIMPLE-ERROR "Cannot declare FTYPE of illegal function name ~S" {100560B263}>.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (notp '(p (foo 42)))
+NIL
+CL-USER> (declaim (optimize (debug 3)))
+NIL
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (termp '())
+; Evaluation aborted on NIL.
+CL-USER> (termp '())
+; Evaluation aborted on NIL.
+CL-USER> (load "/Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp")
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FUNP
+;     (DEFUN FUNP (FUN)
+;       "Verifica se funp sia una funzione generica"
+;       (BREAK)
+;       (AND (LISTP FUN) (FBF-SYMP (CAR FUN)) (TERMP (CADR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN NOTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN NOTP (FUN)
+;       "Verifica se fun sia una funzione di negazione"
+;       (BREAK)
+;       (AND (LISTP FUN) (EQUAL (CAR FUN) 'NOT) (FBFP (CDR FUN))))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ANDP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN ORP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN IMPLIESP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EVERYP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN EXISTP
+;     (FBFP (CDR FUN))
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+
+; file: /Users/alberto.gucciardi/gitXlet42X/clausify-lisp/src/clausify.lisp
+; in: DEFUN FBFP
+;     (NOTP FUN)
+; 
+; caught WARNING:
+;   The function was called with one argument, but wants exactly zero.
+
+;     (DEFUN FBFP (FUN)
+;       (BREAK)
+;       (OR (PREDICATEP FUN) (NOTP FUN) (ANDP FUN) (ORP FUN) (IMPLIESP FUN)
+;           (EVERYP FUN) (EXISTP FUN)))
+; 
+; caught STYLE-WARNING:
+;   The definition has one arg, but the proclamation has zero.
+; 
+; compilation unit finished
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+T
+CL-USER> (trace fbfp)
+(FBFP)
+CL-USER> (fbfp '(not a))
+  0: (FBFP (NOT A))
+; Evaluation aborted on NIL.
+CL-USER> (fbfp '(foo 42))
+  0: (FBFP (FOO 42))
+  0: (FBFP (FOO 42))
+; Evaluation aborted on NIL.
+CL-USER> (predicatep '(foo 42))
+T
+CL-USER> (fbfp '(foo 42))
+  0: (FBFP (FOO 42))
+  0: FBFP returned T
+T
+CL-USER> (fbfp '(implies q (a 42)))
+  0: (FBFP (IMPLIES Q (A 42)))
+  0: FBFP returned T
+T
+CL-USER> (trace fbfp)
+WARNING: FBFP is already TRACE'd, untracing it first.
+(FBFP)
+CL-USER> (fbf '(not a (or q (foo 42))))
+
+; in: FBF '(NOT A (OR Q (FOO 42)))
+;     (FBF '(NOT A (OR Q (FOO 42))))
+; 
+; caught STYLE-WARNING:
+;   undefined function: FBF
+; 
+; compilation unit finished
+;   Undefined function:
+;     FBF
+;   caught 1 STYLE-WARNING condition
+; Evaluation aborted on #<UNDEFINED-FUNCTION FBF {10047B6463}>.
+CL-USER> (fbfp '(not a (or q (foo 42))))
+  0: (FBFP (NOT A (OR Q (FOO 42))))
+  0: FBFP returned T
+T
+CL-USER> 
